@@ -1,10 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Response;
+use App\Http\Actions\GetPostsAction;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/test', function () {
-    return Response::json([
-        'message' => 'Hello, world',
-    ]);
-});
+Route::post('/posts', GetPostsAction::class);
